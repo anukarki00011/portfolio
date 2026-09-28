@@ -2768,3 +2768,229 @@ em {
   gap: 0.5rem;
   line-height: 1.5;
 }
+
+
+/* ---------- Contact link icons ---------- */
+
+.contact-links a {
+  display: grid;
+  grid-template-columns: 34px 1fr auto;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.cl-icon-wrap {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  color: var(--ink-muted);
+  flex-shrink: 0;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cl-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.contact-links a:hover .cl-icon-wrap {
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.contact-links a:nth-child(1):hover .cl-icon-wrap {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.contact-links a:nth-child(2):hover .cl-icon-wrap {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.contact-links a:nth-child(3):hover .cl-icon-wrap {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
+/* ---------- Desktop spacing compaction ----------
+   Tablet and desktop only. Mobile (<=720px) keeps
+   its existing comfortable spacing untouched.       */
+
+@media (min-width: 900px) {
+  /* Global sections */
+  .section {
+    padding: 3.75rem 0;
+  }
+
+  /* Hero: reduce top clearance (navbar is fixed) and
+     pull the marquee/intro up closer. */
+  .hero {
+    padding: 6.5rem 0 3rem;
+    gap: 3rem;
+  }
+
+  .hero-label { margin-bottom: 1.35rem; }
+  .hero-title { margin-bottom: 1.25rem; }
+  .hero-intro { margin-bottom: 1.75rem; }
+  .hero-cta { margin-bottom: 1.5rem; }
+
+  .hero-device-wrap {
+    min-height: 500px;
+    padding: 1.75rem 1rem;
+  }
+
+  /* Section heads */
+  .section-head {
+    margin-bottom: 1.75rem;
+    padding-bottom: 1rem;
+  }
+
+  .section-sub {
+    margin: -0.75rem 0 1.75rem;
+  }
+
+  /* About */
+  .about-dash {
+    margin-bottom: 2.5rem;
+    gap: 1rem;
+  }
+
+  .about-card {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .journey {
+    padding: 1.5rem 1.75rem;
+  }
+
+  .journey-title {
+    margin-bottom: 1.15rem;
+  }
+
+  /* Skills board (works for either layout you kept) */
+  .skill-grid {
+    gap: 1rem;
+  }
+
+  .skill-card {
+    padding: 1.5rem 1.5rem 1.25rem;
+    min-height: 185px;
+  }
+
+  .skill-card-head {
+    margin-bottom: 1.15rem;
+  }
+
+  /* Projects */
+  .projects {
+    gap: 3rem;
+  }
+
+  .proj {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .proj-visual {
+    min-height: 280px;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .proj-info h3 {
+    margin: 0.35rem 0 0.4rem;
+  }
+
+  .proj-tag {
+    margin-bottom: 0.6rem;
+  }
+
+  .proj-desc {
+    margin-bottom: 1rem;
+  }
+
+  .proj-tech {
+    margin-bottom: 1rem;
+  }
+
+  /* Experience */
+  .exp {
+    gap: 0.6rem;
+  }
+
+  .exp-head {
+    padding: 1.15rem 1.35rem;
+  }
+
+  .exp-body {
+    padding: 0 1.35rem;
+  }
+
+  .exp-item.open .exp-body {
+    padding: 0 1.35rem 1.25rem;
+  }
+
+  /* Exploring list */
+  .explore-item {
+    padding: 1.15rem 0;
+  }
+
+  /* Playground */
+  .playground {
+    padding: 2rem;
+    gap: 2.25rem;
+  }
+
+  /* Contact */
+  .contact-grid {
+    gap: 2.5rem;
+  }
+
+  .contact-links a {
+    padding: 0.85rem 0;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 2rem;
+    padding: 1.75rem 0 2rem;
+  }
+
+  /* Nav slightly shorter on desktop */
+  .nav {
+    height: 60px;
+  }
+
+  .nav-wrap {
+    padding: 0.75rem 0;
+  }
+}
+
+/* Icon layout on small screens: shrink the icon chip,
+   keep the value readable */
+@media (max-width: 720px) {
+  .contact-links a {
+    grid-template-columns: 30px 1fr auto;
+    gap: 0.7rem;
+  }
+
+  .cl-icon-wrap {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+  }
+
+  .cl-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
