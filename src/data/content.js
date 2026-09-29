@@ -51,8 +51,13 @@ export const projects = [
     description:
       'Real-time chat, personality-based matching, and a small onboarding flow that actually feels human. Built the Flutter client, the Node/Express backend, and the Socket.IO layer.',
     tech: ['Flutter', 'Node.js', 'Express', 'PostgreSQL', 'Prisma', 'Socket.IO'],
-    github: 'https://github.com/anukarki00011/connectsphere',
+    github: 'https://github.com/anukarki00011/ConnectSphere',
     live: null,
+    screenshots: [
+      'connectsphere.jpeg',
+      'connectsphere-2.png',
+      'connectsphere-3.png',
+    ],
     layout: 'feature',
     tint: 'lavender',
     detail: {
@@ -81,13 +86,14 @@ export const projects = [
     description:
       'Offline-first Flutter app with Firebase sync, monthly insights, and a category breakdown you can actually read at a glance.',
     tech: ['Flutter', 'Firebase', 'Firestore', 'Provider'],
-    github: 'https://github.com/anukarki00011/spendwise',
+    github: 'https://github.com/anukarki00011/SpendWise',
     live: null,
+    screenshots: ['spendwise.png', 'spendwise-2.png'],
     layout: 'split',
     tint: 'blue',
     detail: {
       problem:
-        'Most expense apps bury the useful insight under five taps and a chart you can\'t interpret.',
+        "Most expense apps bury the useful insight under five taps and a chart you can't interpret.",
       idea:
         'One screen. What you spent, on what, and how it compares to last month. Everything else is secondary.',
       features: [
@@ -103,108 +109,14 @@ export const projects = [
       ],
     },
   },
-  // {
-  //   id: 'travelrec',
-  //   name: 'Travel Destination Recommender',
-  //   category: 'Web · ML',
-  //   tagline: 'Picks destinations based on vibe, budget, and season.',
-  //   description:
-  //     'A small recommendation engine wrapped in a clean web UI. Users pick constraints, the model suggests places and explains why.',
-  //   tech: ['Python', 'Flask', 'React', 'scikit-learn'],
-  //   github: 'https://github.com/anukarki',
-  //   live: null,
-  //   layout: 'row',
-  //   tint: 'peach',
-  //   detail: {
-  //     problem:
-  //       '"Where should I go?" is a hard question with too many variables and no good default answer.',
-  //     idea:
-  //       'Turn it into a short questionnaire, then explain each recommendation instead of just listing it.',
-  //     features: [
-  //       'Constraint-driven recommendations',
-  //       'Explainable output ("why this place")',
-  //       'Filterable results by season & budget',
-  //     ],
-  //     learned: [
-  //       'Feature engineering from messy data',
-  //       'Explaining ML output to non-technical users',
-  //     ],
-  //   },
-  // },
-  // {
-  //   id: 'stockpred',
-  //   name: 'Stock Price Prediction',
-  //   category: 'ML · Experiment',
-  //   tagline: 'A small, honest LSTM experiment on time-series data.',
-  //   description:
-  //     'Weekend project exploring how far simple sequence models get on stock data — and why they don\'t go further.',
-  //   tech: ['Python', 'TensorFlow', 'Pandas', 'Matplotlib'],
-  //   github: 'https://github.com/anukarki',
-  //   live: null,
-  //   layout: 'row',
-  //   tint: 'green',
-  //   detail: {
-  //     problem:
-  //       'Everyone says "predict the stock market." It is a good way to learn time-series, and a good way to learn humility.',
-  //     idea: 'Train a simple LSTM, then write down honestly where it fails and why.',
-  //     features: [
-  //       'Data pipeline for OHLCV data',
-  //       'LSTM model with walk-forward validation',
-  //       'Baseline comparison (naive, moving average)',
-  //     ],
-  //     learned: [
-  //       'Why time-series validation is different',
-  //       'Overfitting, and how quickly it happens',
-  //     ],
-  //   },
-  // },
-  // {
-  //   id: 'movietix',
-  //   name: 'Movie Ticket Booking System',
-  //   category: 'Web · Full-stack',
-  //   tagline: 'Seat selection, bookings, and admin view — built end-to-end.',
-  //   description:
-  //     'Full-stack booking flow with an interactive seat map, session management, and an admin dashboard for showtimes.',
-  //   tech: ['React', 'Node.js', 'Express', 'PostgreSQL'],
-  //   github: 'https://github.com/anukarki',
-  //   live: null,
-  //   layout: 'row',
-  //   tint: 'lavender',
-  //   detail: {
-  //     problem: 'Seat booking is deceptively hard — concurrency, state, and UX all collide.',
-  //     idea: 'Build the whole thing end-to-end, no shortcuts, and design the seat map like a real product.',
-  //     features: [
-  //       'Interactive seat selection',
-  //       'Session & hold logic',
-  //       'Admin panel for showtimes',
-  //     ],
-  //     learned: [
-  //       'Preventing double-bookings at the DB level',
-  //       'Modelling session/time state cleanly',
-  //     ],
-  //   },
-  // },
 ];
 
 export const experience = [
-  // {
-  //   role: 'Junior App Developer',
-  //   company: 'Dwaar X Pvt. Ltd.',
-  //   period: '2024 — Present',
-  //   stack: ['Flutter', 'REST APIs', 'Dart'],
-  //   summary: 'Shipping mobile features from design to release.',
-  //   details: [
-  //     'Built and maintained Flutter screens used in production.',
-  //     'Integrated REST APIs and handled real-world error states.',
-  //     'Worked with designers and backend to ship features end-to-end.',
-  //     'Wrote small pieces of internal tooling to speed up releases.',
-  //   ],
-  // },
   {
     role: 'IT Intern',
     company: 'Dwaar X Pvt. Ltd.',
     period: 'Dec 2025 — Feb 2026',
-    stack: ['Testing', 'Small features', 'Git' , 'Frontend Development'],
+    stack: ['Testing', 'Small features', 'Git', 'Frontend Development'],
     summary: 'Learned how production workflows actually work.',
     details: [
       'Assisted with QA and manual testing on mobile releases.',
@@ -216,7 +128,7 @@ export const experience = [
 
 export const exploring = [
   'Better Flutter architecture — state, layers, and clean boundaries',
-  'Backend integration that doesn\'t feel bolted on',
+  "Backend integration that doesn't feel bolted on",
   'Building products instead of just projects',
   'Learning how good UX actually works',
   'Preparing for the next chapter',

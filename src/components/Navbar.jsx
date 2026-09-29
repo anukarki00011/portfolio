@@ -17,7 +17,7 @@ export default function Navbar({ theme, onToggleTheme }) {
     <header className="nav-wrap">
       <div className="nav container">
         <a href="#home" className="nav-logo" onClick={() => setOpen(false)}>
-          anu<span> karki</span>
+          ANU<span> KARKI</span>
         </a>
 
         <nav className={`nav-links ${open ? 'open' : ''}`}>
