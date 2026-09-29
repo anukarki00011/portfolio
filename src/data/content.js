@@ -17,7 +17,7 @@ export const skills = [
       { name: 'JavaScript', hint: 'ES6+, async patterns, the browser.' },
       { name: 'HTML', hint: 'Semantics matter more than people think.' },
       { name: 'CSS', hint: 'Layout, motion, and type as craft.' },
-      { name: 'Tailwind', hint: 'Fast iteration when styling gets heavy.' },
+      { name: 'Bootstrap', hint: 'Rapidly build responsive layouts.' },
     ],
   },
   {
@@ -36,8 +36,10 @@ export const skills = [
     tone: 'green',
     items: [
       { name: 'PostgreSQL', hint: 'Relational data with real constraints.' },
-      { name: 'Prisma', hint: 'Type-safe queries that read like English.' },
+      // { name: 'Prisma', hint: 'Type-safe queries that read like English.' },
       { name: 'Firebase', hint: 'Realtime sync and auth without the ops.' },
+      { name: 'Firestore', hint: 'NoSQL database with a simple API.' },
+      { name: 'SQL', hint:'Structured queries for reliable data.'},
     ],
   },
 ];

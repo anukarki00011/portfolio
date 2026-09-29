@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import useReveal from '../hooks/useReveal.js';
 import { projects } from '../data/content.js';
-
+import { createPortal } from 'react-dom';
 /* ---------- Icons ---------- */
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="14" height="14">
@@ -315,75 +315,79 @@ export default function Projects() {
       </div>
 
       {/* ---------- Fullscreen lightbox ---------- */}
-      {lightbox && (
-        <div
-          className="case-lb"
-          onClick={() => setLightbox(null)}
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${lightbox.project.name} screenshot`}
-        >
-          <button
-            className="case-lb-close"
-            onClick={e => {
-              e.stopPropagation();
-              setLightbox(null);
-            }}
-            aria-label="Close preview"
+          {/* ---------- Fullscreen lightbox (rendered via portal so it centers on the viewport) ---------- */}
+      {lightbox &&
+        typeof document !== 'undefined' &&
+        createPortal(
+          <div
+            className="case-lb"
+            onClick={() => setLightbox(null)}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${lightbox.project.name} screenshot`}
           >
-            <CloseIcon />
-          </button>
+            <button
+              className="case-lb-close"
+              onClick={e => {
+                e.stopPropagation();
+                setLightbox(null);
+              }}
+              aria-label="Close preview"
+            >
+              <CloseIcon />
+            </button>
 
-          {lightbox.project.screenshots.length > 1 && (
-            <>
-              <button
-                className="case-lb-nav case-lb-prev"
-                onClick={e => {
-                  e.stopPropagation();
-                  setLightbox(lb => ({
-                    ...lb,
-                    index:
-                      (lb.index - 1 + lb.project.screenshots.length) %
-                      lb.project.screenshots.length,
-                  }));
-                }}
-                aria-label="Previous screenshot"
-              >
-                <ChevronLeft />
-              </button>
+            {lightbox.project.screenshots.length > 1 && (
+              <>
+                <button
+                  className="case-lb-nav case-lb-prev"
+                  onClick={e => {
+                    e.stopPropagation();
+                    setLightbox(lb => ({
+                      ...lb,
+                      index:
+                        (lb.index - 1 + lb.project.screenshots.length) %
+                        lb.project.screenshots.length,
+                    }));
+                  }}
+                  aria-label="Previous screenshot"
+                >
+                  <ChevronLeft />
+                </button>
 
-              <button
-                className="case-lb-nav case-lb-next"
-                onClick={e => {
-                  e.stopPropagation();
-                  setLightbox(lb => ({
-                    ...lb,
-                    index: (lb.index + 1) % lb.project.screenshots.length,
-                  }));
-                }}
-                aria-label="Next screenshot"
-              >
-                <ChevronRight />
-              </button>
-            </>
-          )}
+                <button
+                  className="case-lb-nav case-lb-next"
+                  onClick={e => {
+                    e.stopPropagation();
+                    setLightbox(lb => ({
+                      ...lb,
+                      index: (lb.index + 1) % lb.project.screenshots.length,
+                    }));
+                  }}
+                  aria-label="Next screenshot"
+                >
+                  <ChevronRight />
+                </button>
+              </>
+            )}
 
-          <figure
-            className="case-lb-stage"
-            onClick={e => e.stopPropagation()}
-          >
-            <img
-              src={`/projects/${lightbox.project.screenshots[lightbox.index]}`}
-              alt={`${lightbox.project.name} screenshot ${lightbox.index + 1}`}
-              className="case-lb-img"
-            />
-            <figcaption className="case-lb-cap">
-              {lightbox.project.name} · {lightbox.index + 1} /{' '}
-              {lightbox.project.screenshots.length}
-            </figcaption>
-          </figure>
-        </div>
-      )}
+            <figure
+              className="case-lb-stage"
+              onClick={e => e.stopPropagation()}
+            >
+              <img
+                src={`/projects/${lightbox.project.screenshots[lightbox.index]}`}
+                alt={`${lightbox.project.name} screenshot ${lightbox.index + 1}`}
+                className="case-lb-img"
+              />
+              <figcaption className="case-lb-cap">
+                {lightbox.project.name} · {lightbox.index + 1} /{' '}
+                {lightbox.project.screenshots.length}
+              </figcaption>
+            </figure>
+          </div>,
+          document.body
+        )}
     </section>
   );
 }
