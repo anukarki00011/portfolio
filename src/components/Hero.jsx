@@ -16,12 +16,14 @@ export default function Hero() {
           <span className="pulse" />
           currently building things with Flutter
         </div>
-
-        <h1 className="hero-title">
+          <h1 className="hero-name" >
+          Anu <span>Karki</span>
+        </h1>
+        <h2 className="hero-title">
           I turn ideas
           <br />
           into things you can <em>tap</em>.
-        </h1>
+        </h2>
 
         <p className="hero-intro">
           I'm Anu Karki — a BCA graduate from Pokhara University, focused on mobile

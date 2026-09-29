@@ -363,7 +363,14 @@ em {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.45; }
 }
-
+.hero-name{
+   font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin-bottom: 1rem;
+}
 .hero-title {
   font-family: var(--font-display);
   font-weight: 400;

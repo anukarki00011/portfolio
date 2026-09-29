@@ -3,15 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>anu karki  — mobile app developer</title>
+
+    <!-- This is what shows in the Google search result -->
+    <title>Anu Karki — Mobile App Developer | Portfolio</title>
     <meta
       name="description"
-      content="Anu Karki — BCA graduate building mobile apps with Flutter. I turn ideas into things you can tap."
+      content="Anu Karki (Anurani Karki) is a mobile app developer and BCA graduate from Pokhara University. Building Flutter, React, and web applications."
     />
-    <meta name="theme-color" content="#f5f1ea" />
+    <meta name="author" content="Anu Karki" />
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>" />
+    <!-- Replace YOUR-DOMAIN with your actual Vercel domain, e.g. anukarki.vercel.app -->
+    <link rel="canonical" href="https://YOUR-DOMAIN.vercel.app/" />
 
+    <!-- How it looks when shared on LinkedIn / WhatsApp / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://YOUR-DOMAIN.vercel.app/" />
+    <meta property="og:title" content="Anu Karki — Mobile App Developer" />
+    <meta
+      property="og:description"
+      content="BCA graduate building mobile apps with Flutter. I turn ideas into things you can tap."
+    />
+    <meta property="og:image" content="https://YOUR-DOMAIN.vercel.app/anu.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Anu Karki — Mobile App Developer" />
+    <meta
+      name="twitter:description"
+      content="BCA graduate building mobile apps with Flutter."
+    />
+    <meta name="twitter:image" content="https://YOUR-DOMAIN.vercel.app/anu.jpg" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>"
+    />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,16 +47,48 @@
       rel="stylesheet"
     />
 
+    <!-- Theme loader -->
     <script>
       (function () {
         try {
           var stored = localStorage.getItem('anu-theme');
           var theme =
             stored ||
-            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            (window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light');
           document.documentElement.setAttribute('data-theme', theme);
         } catch (e) {}
       })();
+    </script>
+
+    <!-- THE MAGIC BLOCK: tells Google this site is about you -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anu Karki",
+        "alternateName": ["Anurani Karki", "Anu"],
+        "url": "https://YOUR-DOMAIN.vercel.app/",
+        "image": "https://YOUR-DOMAIN.vercel.app/anu.jpg",
+        "jobTitle": "Mobile App Developer",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Pokhara University"
+        },
+        "knowsAbout": [
+          "Flutter",
+          "Dart",
+          "Mobile App Development",
+          "React.js",
+          "Node.js",
+          "PostgreSQL"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/anukarki",
+          "https://github.com/anukarki00011"
+        ]
+      }
     </script>
   </head>
   <body>
