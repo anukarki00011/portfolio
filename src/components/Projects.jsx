@@ -140,7 +140,7 @@ export default function Projects() {
       </div>
 
       <p className="section-sub">
-        Click any project to unfold the full case study.
+        {/* Click any project to unfold the full case study. */}
       </p>
 
       <div className="case-list">
