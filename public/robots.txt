@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anuranikarki.vercel.app/sitemap.xml
+Sitemap: https://anuranikarki.com.np/sitemap.xml
