@@ -160,7 +160,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="www.linkedin.com/in/anu-karki000011"
+              href="https://www.linkedin.com/in/anu-karki000011"
               target="_blank"
               rel="noreferrer"
             >
